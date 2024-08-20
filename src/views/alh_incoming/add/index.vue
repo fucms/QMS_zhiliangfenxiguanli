@@ -77,7 +77,7 @@
           <span>张涛</span>
         </el-table-column>
         <el-table-column label="故障发生日期" prop="code" align="center">
-          <span>2023-12-14</span>
+          <span>2023-1-19</span>
         </el-table-column>
 
         <el-table-column label="操作" align="center" min-width="120">

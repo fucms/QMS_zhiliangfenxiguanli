@@ -55,7 +55,7 @@
           </template>
         </el-table-column>
         <el-table-column label="发起时间" prop="code" align="center">
-          <span>2023-11-11</span>
+          <span>2023-1-19</span>
         </el-table-column>
 
         <el-table-column label="操作" align="center" min-width="120">

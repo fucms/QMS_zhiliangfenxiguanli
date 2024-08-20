@@ -76,7 +76,7 @@
           </template>
         </el-table-column>
         <el-table-column label="记录时间" prop="code" align="center">
-          <span>2024-1-3</span>
+          <span>2023-1-19</span>
         </el-table-column>
 
         <el-table-column label="操作" align="center" min-width="120">
