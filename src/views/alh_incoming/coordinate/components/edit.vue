@@ -4,7 +4,7 @@
       <el-form ref="dataForm" :model="temp" label-position="left" label-width="auto" :rules="rules">
         <el-row>
           <el-col :span="12">
-            <el-form-item label="单号" prop="customerCode">
+            <el-form-item label="协调编号" prop="customerCode">
               <el-input v-model="temp.customerCode" />
             </el-form-item>
           </el-col>
@@ -14,25 +14,26 @@
             </el-form-item>
           </el-col>
           <el-col :span="12">
-            <el-form-item label="类别" prop="dutyParagraph">
+            <el-form-item label="客户联系方式" prop="dutyParagraph">
               <el-input v-model="temp.dutyParagraph" />
             </el-form-item>
           </el-col>
           <el-col :span="12">
-            <el-form-item label="产品型号" prop="dutyParagraph">
+            <el-form-item label="问题描述" prop="dutyParagraph">
               <el-input v-model="temp.dutyParagraph" />
             </el-form-item>
           </el-col>
           <el-col :span="12">
-            <el-form-item label="责任人" prop="dutyParagraph">
+            <el-form-item label="客服人员" prop="dutyParagraph">
               <el-input v-model="temp.dutyParagraph" />
             </el-form-item>
           </el-col>
           <el-col :span="12">
-            <el-form-item label="制单人" prop="dutyParagraph">
+            <el-form-item label="问题解决方案" prop="dutyParagraph">
               <el-input v-model="temp.dutyParagraph" />
             </el-form-item>
           </el-col>
+
         </el-row>
       </el-form>
       <div slot="footer" class="dialog-footer">
@@ -48,7 +49,7 @@
 export default {
   data() {
     return {
-      title: '新增',
+      title: '编辑',
       visible: false,
       temp: {
         customerCode: '',

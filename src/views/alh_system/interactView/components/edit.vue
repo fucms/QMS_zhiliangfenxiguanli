@@ -1,36 +1,26 @@
 <template>
   <div>
-    <el-dialog :title="title" :visible.sync="visible" style="padding-bottom: 5vh" width="60%">
+    <el-dialog :title="title" :visible.sync="visible" style="padding-bottom: 5vh" width="30%">
       <el-form ref="dataForm" :model="temp" label-position="left" label-width="auto" :rules="rules">
         <el-row>
-          <el-col :span="12">
-            <el-form-item label="单号" prop="customerCode">
+          <el-col :span="24">
+            <el-form-item label="页面ID" prop="customerCode">
               <el-input v-model="temp.customerCode" />
             </el-form-item>
           </el-col>
-          <el-col :span="12">
-            <el-form-item label="客户名称" prop="customerName">
+          <el-col :span="24">
+            <el-form-item label="页面名称" prop="customerName">
               <el-input v-model="temp.customerName" />
             </el-form-item>
           </el-col>
-          <el-col :span="12">
-            <el-form-item label="类别" prop="dutyParagraph">
-              <el-input v-model="temp.dutyParagraph" />
+          <el-col :span="24">
+            <el-form-item label="页面URL" prop="customerName">
+              <el-input v-model="temp.customerName" />
             </el-form-item>
           </el-col>
-          <el-col :span="12">
-            <el-form-item label="产品型号" prop="dutyParagraph">
-              <el-input v-model="temp.dutyParagraph" />
-            </el-form-item>
-          </el-col>
-          <el-col :span="12">
-            <el-form-item label="责任人" prop="dutyParagraph">
-              <el-input v-model="temp.dutyParagraph" />
-            </el-form-item>
-          </el-col>
-          <el-col :span="12">
-            <el-form-item label="制单人" prop="dutyParagraph">
-              <el-input v-model="temp.dutyParagraph" />
+          <el-col :span="24">
+            <el-form-item label="所属模块" prop="customerName">
+              <el-input v-model="temp.customerName" />
             </el-form-item>
           </el-col>
         </el-row>
@@ -48,7 +38,7 @@
 export default {
   data() {
     return {
-      title: '新增',
+      title: '编辑',
       visible: false,
       temp: {
         customerCode: '',

@@ -4,19 +4,13 @@
       <!-- <el-input v-model="listQuery.filter" style="width: 200px" class="filter-item"
                   @keyup.enter.native="handleFilter" /> -->
       <el-form :inline="true" :model="listQuery" class="demo-form-inline">
-        <el-form-item label="单号">
+        <el-form-item label="产品编号">
           <el-input v-model="listQuery.filter" placeholder="请输入单号" />
         </el-form-item>
-        <el-form-item label="客户名称">
-          <el-input v-model="listQuery.filter" placeholder="请输入客户名称" />
-        </el-form-item>
-        <el-form-item label="产品型号">
+        <el-form-item label="生产批次号">
           <el-input v-model="listQuery.filter" placeholder="请输入产品型号" />
         </el-form-item>
-        <el-form-item label="责任人">
-          <el-input v-model="listQuery.filter" placeholder="请输入责任人" />
-        </el-form-item>
-        <el-form-item label="制单人">
+        <el-form-item label="检验单编号">
           <el-input v-model="listQuery.filter" placeholder="请输入制单人" />
         </el-form-item>
         <el-form-item>
@@ -56,31 +50,33 @@
         highlight-current-row
         style="width: 100%"
       >
-        <el-table-column label="单号" prop="index" align="center" min-width="50">
+        <el-table-column label="产品编号" prop="index" align="center" min-width="50">
           <template slot-scope="{ row }">
             <span>{{ row.index }}</span>
           </template>
         </el-table-column>
-        <el-table-column label="客户名称" prop="code" align="center">
+        <el-table-column label="产品名称" prop="code" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.principal }}</span>
+            <span>{{ '产品'+row.index }}</span>
           </template>
         </el-table-column>
-        <el-table-column label="类别" prop="code" align="center">
+        <el-table-column label="生产批次号" prop="code" align="center">
           <template slot-scope="{ row }">
-            <span>{{ '类别'+row.index }}</span>
+            <span>{{ '批次'+row.index }}</span>
           </template>
         </el-table-column>
-        <el-table-column label="产品型号" prop="code" align="center">
+        <el-table-column label="生产日期" prop="code" align="center">
+          <span>2023-11-11</span>
+        </el-table-column>
+        <el-table-column label="检验单编号" prop="code" align="center">
           <template slot-scope="{ row }">
-            <span>{{ '型号'+row.index }}</span>
+            <span>{{ row.code }}</span>
           </template>
         </el-table-column>
-        <el-table-column label="责任人" prop="code" align="center">
-          <span>张涛</span>
-        </el-table-column>
-        <el-table-column label="制单人" prop="code" align="center">
-          <span>李明</span>
+        <el-table-column label="检验结果" prop="code" align="center">
+          <template slot-scope="{ row }">
+            <el-tag :type="row.number > 50 ? 'success' : 'danger'">{{ row.number > 50 ? '合格' : '不合格' }}</el-tag>
+          </template>
         </el-table-column>
 
         <el-table-column label="操作" align="center" min-width="120">

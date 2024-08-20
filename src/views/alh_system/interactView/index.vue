@@ -2,22 +2,10 @@
   <div class="app-container">
     <div class="filter-container">
       <!-- <el-input v-model="listQuery.filter" style="width: 200px" class="filter-item"
-                  @keyup.enter.native="handleFilter" /> -->
+                @keyup.enter.native="handleFilter" /> -->
       <el-form :inline="true" :model="listQuery" class="demo-form-inline">
-        <el-form-item label="单号">
-          <el-input v-model="listQuery.filter" placeholder="请输入单号" />
-        </el-form-item>
-        <el-form-item label="客户名称">
-          <el-input v-model="listQuery.filter" placeholder="请输入客户名称" />
-        </el-form-item>
-        <el-form-item label="产品型号">
-          <el-input v-model="listQuery.filter" placeholder="请输入产品型号" />
-        </el-form-item>
-        <el-form-item label="责任人">
-          <el-input v-model="listQuery.filter" placeholder="请输入责任人" />
-        </el-form-item>
-        <el-form-item label="制单人">
-          <el-input v-model="listQuery.filter" placeholder="请输入制单人" />
+        <el-form-item label="页面ID">
+          <el-input v-model="listQuery.filter" placeholder="请输入页面ID" />
         </el-form-item>
         <el-form-item>
           <el-button class="filter-item" type="primary" icon="el-icon-search" @click="handleFilter">
@@ -56,31 +44,23 @@
         highlight-current-row
         style="width: 100%"
       >
-        <el-table-column label="单号" prop="index" align="center" min-width="50">
+        <el-table-column label="页面ID" prop="index" align="center" min-width="50">
           <template slot-scope="{ row }">
             <span>{{ row.index }}</span>
           </template>
         </el-table-column>
-        <el-table-column label="客户名称" prop="code" align="center">
+        <el-table-column label="页面名称" prop="code" align="center">
           <template slot-scope="{ row }">
-            <span>{{ row.principal }}</span>
+            <span>{{ '测试' + row.index }}</span>
           </template>
         </el-table-column>
-        <el-table-column label="类别" prop="code" align="center">
+        <el-table-column label="页面URL" prop="code" align="center">
+          <span>http://localhost:9527/#/alhSystem/accountView</span>
+        </el-table-column>
+        <el-table-column label="所属模块" prop="code" align="center">
           <template slot-scope="{ row }">
-            <span>{{ '类别'+row.index }}</span>
+            <span>{{ '模块' + row.index }}</span>
           </template>
-        </el-table-column>
-        <el-table-column label="产品型号" prop="code" align="center">
-          <template slot-scope="{ row }">
-            <span>{{ '型号'+row.index }}</span>
-          </template>
-        </el-table-column>
-        <el-table-column label="责任人" prop="code" align="center">
-          <span>张涛</span>
-        </el-table-column>
-        <el-table-column label="制单人" prop="code" align="center">
-          <span>李明</span>
         </el-table-column>
 
         <el-table-column label="操作" align="center" min-width="120">
@@ -182,4 +162,4 @@ export default {
 }
 </script>
 
-  <style lang="less" scoped></style>
+<style lang="less" scoped></style>

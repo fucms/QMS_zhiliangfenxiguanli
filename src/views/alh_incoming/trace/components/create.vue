@@ -4,32 +4,32 @@
       <el-form ref="dataForm" :model="temp" label-position="left" label-width="auto" :rules="rules">
         <el-row>
           <el-col :span="12">
-            <el-form-item label="单号" prop="customerCode">
+            <el-form-item label="产品编号" prop="customerCode">
               <el-input v-model="temp.customerCode" />
             </el-form-item>
           </el-col>
           <el-col :span="12">
-            <el-form-item label="客户名称" prop="customerName">
+            <el-form-item label="产品名称" prop="customerName">
               <el-input v-model="temp.customerName" />
             </el-form-item>
           </el-col>
           <el-col :span="12">
-            <el-form-item label="类别" prop="dutyParagraph">
+            <el-form-item label="生产批次号" prop="dutyParagraph">
               <el-input v-model="temp.dutyParagraph" />
             </el-form-item>
           </el-col>
           <el-col :span="12">
-            <el-form-item label="产品型号" prop="dutyParagraph">
+            <el-form-item label="生产日期" prop="dutyParagraph">
               <el-input v-model="temp.dutyParagraph" />
             </el-form-item>
           </el-col>
           <el-col :span="12">
-            <el-form-item label="责任人" prop="dutyParagraph">
+            <el-form-item label="检验单编号" prop="dutyParagraph">
               <el-input v-model="temp.dutyParagraph" />
             </el-form-item>
           </el-col>
           <el-col :span="12">
-            <el-form-item label="制单人" prop="dutyParagraph">
+            <el-form-item label="检验结果" prop="dutyParagraph">
               <el-input v-model="temp.dutyParagraph" />
             </el-form-item>
           </el-col>

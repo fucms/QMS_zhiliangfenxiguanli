@@ -17,6 +17,18 @@ const alhincomingRouter = {
       component: () => import('@/views/alh_incoming/add/index.vue'),
       name: 'add',
       meta: { title: '新增异常报告维护' }
+    },
+    {
+      path: 'trace',
+      component: () => import('@/views/alh_incoming/trace/index.vue'),
+      name: 'trace',
+      meta: { title: '质量追溯管理' }
+    },
+    {
+      path: 'coordinate',
+      component: () => import('@/views/alh_incoming/coordinate/index.vue'),
+      name: 'coordinate',
+      meta: { title: '客服协调' }
     }
   ]
 }

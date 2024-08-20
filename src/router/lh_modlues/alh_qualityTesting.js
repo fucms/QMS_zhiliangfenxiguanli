@@ -35,6 +35,18 @@ const qualityTestingRouter = {
       component: () => import('@/views/alh_qualityTesting/checkRecord/index.vue'),
       name: 'checkRecord',
       meta: { title: '检验记录台账' }
+    },
+    {
+      path: 'deliverCheck',
+      component: () => import('@/views/alh_qualityTesting/deliverCheck/index.vue'),
+      name: 'deliverCheck',
+      meta: { title: '发货检验管理' }
+    },
+    {
+      path: 'returnCheck',
+      component: () => import('@/views/alh_qualityTesting/returnCheck/index.vue'),
+      name: 'returnCheck',
+      meta: { title: '退货检验管理' }
     }
   ]
 }
