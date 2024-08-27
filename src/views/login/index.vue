@@ -1,7 +1,13 @@
 <template>
   <div class="login-container">
-    <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form" autocomplete="on"
-      label-position="left">
+    <el-form
+      ref="loginForm"
+      :model="loginForm"
+      :rules="loginRules"
+      class="login-form"
+      autocomplete="on"
+      label-position="left"
+    >
       <div class="title-container">
         <!-- <div class="img">
           <img src="@/assets/logo/25-1.png" alt="" >
@@ -15,8 +21,15 @@
         <span class="svg-container">
           <svg-icon icon-class="user" />
         </span>
-        <el-input ref="username" v-model="loginForm.username" placeholder="username" name="username" type="text"
-          tabindex="1" autocomplete="on" />
+        <el-input
+          ref="username"
+          v-model="loginForm.username"
+          placeholder="username"
+          name="username"
+          type="text"
+          tabindex="1"
+          autocomplete="on"
+        />
       </el-form-item>
 
       <el-tooltip v-model="capsTooltip" content="Caps lock is On" placement="right" manual>
@@ -24,21 +37,33 @@
           <span class="svg-container">
             <svg-icon icon-class="password" />
           </span>
-          <el-input :key="passwordType" ref="password" v-model="loginForm.password" :type="passwordType"
-            placeholder="Password" name="password" tabindex="2" autocomplete="on" @keyup.native="checkCapslock"
-            @blur="capsTooltip = false" @keyup.enter.native="handleLogin" />
+          <el-input
+            :key="passwordType"
+            ref="password"
+            v-model="loginForm.password"
+            :type="passwordType"
+            placeholder="Password"
+            name="password"
+            tabindex="2"
+            autocomplete="on"
+            @keyup.native="checkCapslock"
+            @blur="capsTooltip = false"
+            @keyup.enter.native="handleLogin"
+          />
           <span class="show-pwd" @click="showPwd">
             <svg-icon :icon-class="passwordType === 'password' ? 'eye' : 'eye-open'" />
           </span>
         </el-form-item>
       </el-tooltip>
 
-      <el-button :loading="loading" type="primary"
+      <el-button
+        :loading="loading"
+        type="primary"
         style="width: 100%; margin-bottom: 30px; height: 40px;font-size: 18px;"
-        @click.native.prevent="handleLogin">登录</el-button>
+        @click.native.prevent="handleLogin"
+      >登录</el-button>
 
     </el-form>
-    <p class="isP">Copyright © xxxxxx有限公司 版权所有</p>
 
     <el-dialog title="Or connect with" :visible.sync="showDialog">
       Can not be simulated on local, so please combine you own business
@@ -94,7 +119,7 @@ export default {
   },
   watch: {
     $route: {
-      handler: function (route) {
+      handler: function(route) {
         const query = route.query
         if (query) {
           this.redirect = query.redirect
