@@ -5,13 +5,13 @@
                 @keyup.enter.native="handleFilter" /> -->
       <el-form :inline="true" :model="listQuery" class="demo-form-inline">
         <el-form-item label="订单编号">
-          <el-input v-model="listQuery.filter" placeholder="请输入编号" />
+          <el-input v-model="listQuery.filter" placeholder="请输入订单编号" />
         </el-form-item>
         <el-form-item label="发货单编号">
-          <el-input v-model="listQuery.filter" placeholder="请输入产品型号" />
+          <el-input v-model="listQuery.filter" placeholder="请输入发货单编号" />
         </el-form-item>
         <el-form-item label="检验单编号">
-          <el-input v-model="listQuery.filter" placeholder="请输入产品分类" />
+          <el-input v-model="listQuery.filter" placeholder="请输入检验单编号" />
         </el-form-item>
 
         <el-form-item>

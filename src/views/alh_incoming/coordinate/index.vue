@@ -5,7 +5,7 @@
                   @keyup.enter.native="handleFilter" /> -->
       <el-form :inline="true" :model="listQuery" class="demo-form-inline">
         <el-form-item label="协调编号">
-          <el-input v-model="listQuery.filter" placeholder="请输入单号" />
+          <el-input v-model="listQuery.filter" placeholder="请输入协调编号" />
         </el-form-item>
         <el-form-item label="客户名称">
           <el-input v-model="listQuery.filter" placeholder="请输入客户名称" />

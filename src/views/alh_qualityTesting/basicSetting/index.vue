@@ -65,7 +65,7 @@
         </el-table-column>
         <el-table-column label="物料分类" prop="code" align="center">
           <template slot-scope="{ row }">
-            <span>{{ '分类' + row.index }}}</span>
+            <span>{{ '分类' + row.index }}</span>
           </template>
         </el-table-column>
         <el-table-column label="抽样方案" prop="code" align="center">
